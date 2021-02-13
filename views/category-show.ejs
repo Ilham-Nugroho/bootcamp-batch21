@@ -1,0 +1,15 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+
+<h2 class=""><%= category.name %></h2>
+<div class="">
+  <!-- <a class="btn btn-primary" href="/category/%= category.id %>/edit">Edit</a> -->
+  <%- include('deleteForm',
+              { url: `/category/${category.id}` }) %>
+</div>
+<% if (articlesByCategory.length > 0) { %>
+  <h2 class="">Category</h2>
+  <%- include('articles-grid', { articles: articlesByCategory }) %>
+<% } %>
+
+<%- include('partials/footer') %>

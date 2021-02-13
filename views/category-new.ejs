@@ -1,0 +1,13 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+
+<h2 class="">New Category</h2>
+<form action="/category" method="POST">
+  <%- include('category-form') %>
+  <div class="form-row form-row-end btn-row">
+    <a class="btn btn-danger" href="/category">Cancel</a>
+    <button class="btn btn-primary" type="submit">Create</button>
+  </div>
+</form>
+
+<%- include('partials/footer') %>

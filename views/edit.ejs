@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+  <%- include('partials/navbar') %>
+
+    <div class="">
+      <h2 class="">Edit Article</h2>
+
+      <form class=""  method="post" action="/articles/<%= article.id %>?_method=PUT">
+        
+
+        <%- include('form.ejs') %>
+
+        <div>
+          <!-- class="btn-row form-row form-row-end" -->
+          <a class="btn btn-danger" href="/articles">Cancel</a>
+          <button class="btn btn-primary" type="submit" name="button">Update</button>
+        </div>
+
+      </form>
+
+    </div>
+
+    <%- include('partials/footer') %>

@@ -1,0 +1,49 @@
+<%- include('partials/header') %>
+  <%- include('partials/navbar') %>
+
+    <div class="">
+      <h2 class="">
+        <%= article.title %>
+      </h2>
+
+      <div>
+        
+
+        <div class="">
+          <img height="30%" width="20%" src="<%= article.coverImagePath %>" class="">
+
+          <div>
+            
+            <a class="btn btn-primary" href="/articles/<%= article.id %>/edit">Edit</a>
+            
+            
+            <form class="" method="POST" action="<%= `/articles/${article.id}` %>?_method=DELETE">
+              <button class="btn btn-danger" type="SUBMIT" name="button">Delete</button>
+            </form>
+
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <h5>author: <%= article.author %></h5>
+            <h5>category: <%= article.category.name %></h5>
+            <h5>published: <%= article.publishDate.toDateString()%></h5>
+            
+          </div>
+
+          <div>
+            <h5>content:</h5>
+            <p><%= article.content %></p>
+            
+          </div>
+          
+
+    
+        </div>
+
+      </div>
+    </div>
+
+
+    <%- include('partials/footer') %>

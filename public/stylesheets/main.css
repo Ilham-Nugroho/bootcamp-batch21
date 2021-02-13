@@ -1,0 +1,12 @@
+.navbar-links li a {
+  text-decoration: none;
+  color: grey;
+  padding: 1rem 0rem 1rem 1.7rem;
+  display: block;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.navbar-links li a:hover {
+  color: black;
+}

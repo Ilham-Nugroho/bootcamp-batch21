@@ -1,0 +1,54 @@
+<div class="">
+  <!-- form-row-->
+  <div class="">
+    <!-- form-item-->
+    <label for="">Title</label>
+    <input type="text" name="title" value="<%= article.title%>">  
+    
+  </div>
+
+  <!-- <div>
+    <label for="">category</label>
+    <input type="text" name="category" value="<%= article.category%>"> 
+  </div> -->
+  <div class="">
+    <label>Category</label>
+    <select name="category">
+      <% category.forEach(category => { %>
+        <% if (category.id === article.category) { %>
+          <option selected label="<%= category.name %>" value="<%= category.id %>">
+        <% } else { %>
+          <option label="<%= category.name %>" value="<%= category.id %>">
+        <% } %>
+      <% }) %>
+    </select>
+  </div>
+
+  <div class="">
+    
+    <label for="">Author</label>
+    <input type="text" name="author" value="<%= article.author%>">  
+    
+  </div>
+  
+
+
+
+  <div class="">
+    <label>Publish Date</label>
+    <input type="date" name="publishDate"
+          value="<%= article.publishDate == null ? '' : article.publishDate.toISOString().split('T')[0] %>">
+  </div>
+</div>
+
+<div class="">
+  <div class="">
+    <label for="">content</label>
+    <textarea name="content"><%= article.content %></textarea>
+  </div>
+
+  <div class="">
+    <label for="">Cover</label>
+    <input type="file" name="cover" class="filepond">
+  </div>
+</div>

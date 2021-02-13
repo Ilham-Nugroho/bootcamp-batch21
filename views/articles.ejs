@@ -1,0 +1,20 @@
+<%- include('partials/header') %>
+  <%- include('partials/navbar') %>
+
+    <h2>Search something</h2>
+    <form class="" action="/articles" method="GET">
+      <div class="">
+        <div class="">
+          <label for="">Title</label>
+          <input type="text" name="title" value="<%= searchOptions.title %>"> 
+          <button class="" type="submit" name="button">Search</button>
+        </div>
+      </div>
+      
+    </form>
+
+    
+    <%- include('articles-grid') %>
+
+
+<%- include('partials/footer') %>

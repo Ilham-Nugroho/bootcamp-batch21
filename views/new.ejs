@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+  <%- include('partials/navbar') %>
+
+    <div class="">
+      <h2 class="">New Articles</h2>
+
+      <form class="" action="/articles" method="post">
+
+        <%-include('form.ejs')%>
+
+        <div>
+          <!-- class="btn-row form-row form-row-end" -->
+          <a class="btn btn-danger" href="/articles">Cancel</a>
+          <button class="btn btn-primary" type="submit" name="button">Create</button>
+        </div>
+
+      </form>
+
+    </div>
+
+    <%- include('partials/footer') %>
